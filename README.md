@@ -2,6 +2,10 @@
 
 An anime cyberpunk themed cybersecurity portfolio for **Brinda T B**, showcasing expertise in SOC security monitoring, Splunk log analysis, network scanning with Nmap, digital forensics, and criminological behavioral profiling.
 
+> **🌐 Live Deployment:** [https://brinda141.vercel.app/](https://brinda141.vercel.app/)  
+> **📄 Attached Official Resume (PDF):** [`assets/Brinda_TB_Resume.pdf`](assets/Brinda_TB_Resume.pdf)  
+> **🌐 Standalone ATS Resume (HTML):** [`resume.html`](resume.html)  
+
 ![Brinda Cyber Portfolio](assets/brinda-real.png)
 
 ---
@@ -15,8 +19,8 @@ An anime cyberpunk themed cybersecurity portfolio for **Brinda T B**, showcasing
 - **Interactive Mission Simulators:**
   - **Splunk Enterprise SIEM:** Live SPL query simulator (SSH brute force, port scan reconnaissance, C2 beaconing, data exfiltration).
   - **Nmap Network Recon:** Interactive command-line simulator (SYN stealth scans, version probes, NSE vulnerability checks).
-- **BRINDA-OS Interactive Terminal:** Functional terminal console supporting `help`, `whoami`, `skills`, `projects`, `forensics`, `scan`, `education`, `contact`, and `clear`.
-- **Dossier CV Modal:** One-click modal reproducing the full resume with printable / Save as PDF support.
+- **BRINDA-OS Interactive Terminal:** Functional terminal console supporting `help`, `whoami`, `skills`, `projects`, `forensics`, `scan`, `education`, `resume`, `contact`, and `clear`.
+- **Professional Resume Setup:** Attached official PDF resume (`Brinda_TB_Resume.pdf`), dedicated standalone ATS-friendly resume (`resume.html`), and in-page printable modal.
 - **Direct Gmail Dispatch Transmission:** Contact form directly connected to Brinda's Gmail (`brindababu2435@gmail.com`) with instant Gmail Web compose integration.
 
 ---
@@ -25,6 +29,7 @@ An anime cyberpunk themed cybersecurity portfolio for **Brinda T B**, showcasing
 
 - **Name:** Brinda T B
 - **Location:** Thrissur, Kerala, India
+- **Live Portfolio:** [https://brinda141.vercel.app/](https://brinda141.vercel.app/)
 - **Email:** [brindababu2435@gmail.com](mailto:brindababu2435@gmail.com)
 - **Phone:** [+91 9847602435](tel:+919847602435)
 - **LinkedIn:** [linkedin.com/in/brinda-t-b](https://linkedin.com/in/brinda-t-b)

@@ -544,6 +544,7 @@ IP ID Sequence Generation: Incremental`
   <span class="term-green">skills</span>     - Core technical & investigative cybersecurity capabilities
   <span class="term-green">projects</span>   - Declassified security monitoring & network scanning operations
   <span class="term-green">education</span>  - Academic & Certified Ethical Hacking credentials
+  <span class="term-green">resume</span>     - Official attached PDF resume & ATS document
   <span class="term-green">contact</span>    - Direct encrypted comms channels
   <span class="term-green">scan</span>       - Run automated perimeter vulnerability check
   <span class="term-green">forensics</span>  - View digital evidence & criminology integration
@@ -633,6 +634,18 @@ and network packet forensics to build air-tight cyber incident reports.
         break;
       case 'education':
         printLine(termEducation);
+        break;
+      case 'resume':
+      case 'cv':
+        playCyberSound('click');
+        printLine(`
+<span class="term-cyan">OFFICIAL ATTACHED RESUME DOSSIER:</span>
+--------------------------------------------------
+<span class="term-green">[✓] PDF File Attached:</span> <a href="assets/Brinda_TB_Resume.pdf" download="Brinda_TB_Resume.pdf" style="color:#00ffa3; text-decoration:underline;">assets/Brinda_TB_Resume.pdf</a>
+<span class="term-green">[✓] Standalone ATS Document:</span> <a href="resume.html" target="_blank" style="color:#00f0ff; text-decoration:underline;">resume.html (Open Full Page)</a>
+<span class="term-dim">Launching interactive resume viewer...</span>
+`);
+        setTimeout(() => openResume(), 400);
         break;
       case 'contact':
         printLine(termContact);

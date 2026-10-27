@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brinda T B - Professional Resume | Cyber Security & Forensics</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap">
+  <style>
+    :root {
+      --primary: #0f172a;
+      --primary-accent: #0284c7;
+      --secondary: #334155;
+      --text: #1e293b;
+      --text-muted: #64748b;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --border: #e2e8f0;
+      --tag-bg: #f1f5f9;
+      --tag-border: #cbd5e1;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      padding: 2rem 1rem;
+    }
+
+    /* Print / Action Toolbar (Hidden during printing) */
+    .action-toolbar {
+      max-width: 860px;
+      margin: 0 auto 1.5rem auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #0f172a;
+      padding: 0.85rem 1.5rem;
+      border-radius: 8px;
+      color: #fff;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .toolbar-title {
+      font-weight: 600;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .toolbar-actions {
+      display: flex;
+      gap: 0.75rem;
+    }
+
+    .toolbar-btn {
+      background: #0284c7;
+      color: #fff;
+      border: none;
+      padding: 0.45rem 1rem;
+      border-radius: 6px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: background 0.2s;
+    }
+
+    .toolbar-btn:hover {
+      background: #0369a1;
+    }
+
+    .toolbar-btn.secondary {
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+    }
+
+    .toolbar-btn.secondary:hover {
+      background: rgba(255, 255, 255, 0.25);
+    }
+
+    /* Resume Document Wrapper */
+    .resume-wrapper {
+      max-width: 860px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 3rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    }
+
+    /* Header */
+    .resume-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 1.8rem;
+      margin-bottom: 1.8rem;
+      gap: 1.5rem;
+    }
+
+    .header-info {
+      flex: 1;
+    }
+
+    .candidate-name {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--primary);
+      letter-spacing: -0.5px;
+      margin-bottom: 0.2rem;
+    }
+
+    .candidate-role {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--primary-accent);
+      margin-bottom: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .contact-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1.25rem;
+      font-size: 0.88rem;
+      color: var(--secondary);
+    }
+
+    .contact-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .contact-item a {
+      color: var(--primary-accent);
+      text-decoration: none;
+    }
+
+    .contact-item a:hover {
+      text-decoration: underline;
+    }
+
+    .candidate-photo {
+      width: 105px;
+      height: 105px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--primary-accent);
+      box-shadow: 0 4px 12px rgba(2, 132, 199, 0.2);
+      flex-shrink: 0;
+    }
+
+    /* Section */
+    .resume-section {
+      margin-bottom: 1.6rem;
+    }
+
+    .section-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.75px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.35rem;
+      margin-bottom: 0.85rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .section-content {
+      font-size: 0.92rem;
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* Skills Grid */
+    .skills-category-group {
+      margin-bottom: 0.85rem;
+    }
+
+    .skills-category-title {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--secondary);
+      margin-bottom: 0.4rem;
+    }
+
+    .skills-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .skill-tag {
+      background: var(--tag-bg);
+      border: 1px solid var(--tag-border);
+      color: var(--text);
+      padding: 0.25rem 0.65rem;
+      border-radius: 4px;
+      font-size: 0.82rem;
+      font-weight: 500;
+    }
+
+    .skill-tag.accent {
+      background: #e0f2fe;
+      border-color: #bae6fd;
+      color: #0369a1;
+      font-weight: 600;
+    }
+
+    /* Experience / Projects / Education Items */
+    .item-entry {
+      margin-bottom: 1.2rem;
+    }
+
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.25rem;
+      flex-wrap: wrap;
+      gap: 0.25rem;
+    }
+
+    .item-title {
+      font-size: 0.98rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .item-meta {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    .item-subtitle {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--primary-accent);
+      margin-bottom: 0.4rem;
+    }
+
+    .item-bullets {
+      list-style-type: disc;
+      padding-left: 1.25rem;
+      font-size: 0.9rem;
+      color: #334155;
+    }
+
+    .item-bullets li {
+      margin-bottom: 0.35rem;
+      line-height: 1.5;
+    }
+
+    /* Print Styles */
+    @media print {
+      body {
+        background: #fff;
+        padding: 0;
+        margin: 0;
+      }
+
+      .action-toolbar {
+        display: none !important;
+      }
+
+      .resume-wrapper {
+        border: none;
+        box-shadow: none;
+        padding: 0;
+        max-width: 100%;
+      }
+
+      .candidate-name {
+        font-size: 2rem;
+      }
+
+      .resume-header {
+        border-bottom-color: #000;
+        padding-bottom: 1.2rem;
+        margin-bottom: 1.2rem;
+      }
+
+      .section-title {
+        border-bottom-color: #94a3b8;
+        page-break-after: avoid;
+      }
+
+      .item-entry {
+        page-break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Print & Download Action Bar (Screen Only) -->
+  <div class="action-toolbar">
+    <div class="toolbar-title">
+      <span>📄</span>
+      <span>BRINDA T B // OFFICIAL PROFESSIONAL RESUME</span>
+    </div>
+    <div class="toolbar-actions">
+      <button onclick="window.print()" class="toolbar-btn">
+        <span>🖨️</span>
+        <span>Print / Save as PDF</span>
+      </button>
+      <a href="assets/Brinda_TB_Resume.pdf" download="Brinda_TB_Resume.pdf" class="toolbar-btn secondary" id="downloadPdfBtn">
+        <span>📥</span>
+        <span>Download PDF</span>
+      </a>
+      <a href="index.html" class="toolbar-btn secondary">
+        <span>⚡</span>
+        <span>Cyber Portfolio</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Document Paper -->
+  <div class="resume-wrapper">
+
+    <!-- Header -->
+    <header class="resume-header">
+      <div class="header-info">
+        <h1 class="candidate-name">BRINDA T B</h1>
+        <div class="candidate-role">Cyber Security Enthusiast | SOC Operations & Digital Forensics</div>
+        <div class="contact-grid">
+          <div class="contact-item">
+            <span>📍</span> <span>Thrissur, Kerala, India</span>
+          </div>
+          <div class="contact-item">
+            <span>📞</span> <a href="tel:+919847602435">+91 9847602435</a>
+          </div>
+          <div class="contact-item">
+            <span>✉️</span> <a href="mailto:brindababu2435@gmail.com">brindababu2435@gmail.com</a>
+          </div>
+          <div class="contact-item">
+            <span>🔗</span> <a href="https://linkedin.com/in/brinda-t-b" target="_blank">linkedin.com/in/brinda-t-b</a>
+          </div>
+          <div class="contact-item">
+            <span>🌐</span> <a href="https://brinda141.vercel.app/" target="_blank">brinda141.vercel.app</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Authentic Candidate Photograph -->
+      <img src="assets/brinda-real.png" alt="Brinda T B" class="candidate-photo">
+    </header>
+
+    <!-- Professional Summary -->
+    <section class="resume-section">
+      <h2 class="section-title">Professional Summary</h2>
+      <div class="section-content">
+        Motivated Cyber Security enthusiast with a Bachelor's degree in Criminology and Police Science, currently pursuing an Advanced Diploma in Cyber Defence and Certified Ethical Hacking. Possesses strong analytical grounding in behavioral cybercrime analysis, security monitoring, threat detection, and digital forensics fundamentals. Seeking opportunities to apply rigorous technical and investigative capabilities within Security Operations Center (SOC) environments and incident response operations.
+      </div>
+    </section>
+
+    <!-- Technical & Investigative Skills -->
+    <section class="resume-section">
+      <h2 class="section-title">Technical & Analytical Skills</h2>
+      <div class="section-content">
+        
+        <div class="skills-category-group">
+          <div class="skills-category-title">Security Monitoring & SIEM:</div>
+          <div class="skills-tags">
+            <span class="skill-tag accent">Log Analysis</span>
+            <span class="skill-tag accent">Security Operations Center (SOC) Monitoring</span>
+            <span class="skill-tag accent">Splunk Enterprise</span>
+            <span class="skill-tag">Search Processing Language (SPL)</span>
+            <span class="skill-tag">Alert Triaging</span>
+            <span class="skill-tag">Threat Detection</span>
+            <span class="skill-tag">Incident Analysis (Beginner)</span>
+          </div>
+        </div>
+
+        <div class="skills-category-group">
+          <div class="skills-category-title">Networking & Protocols:</div>
+          <div class="skills-tags">
+            <span class="skill-tag accent">TCP/IP</span>
+            <span class="skill-tag">DNS</span>
+            <span class="skill-tag">HTTP / HTTPS</span>
+            <span class="skill-tag">Subnetting</span>
+            <span class="skill-tag">Port Protocols</span>
+            <span class="skill-tag">Packet Analysis Basics</span>
+          </div>
+        </div>
+
+        <div class="skills-category-group">
+          <div class="skills-category-title">Defensive & Offensive Security:</div>
+          <div class="skills-tags">
+            <span class="skill-tag accent">Cyber Security Fundamentals</span>
+            <span class="skill-tag accent">Network Reconnaissance & Scanning (Nmap)</span>
+            <span class="skill-tag">Service Enumeration</span>
+            <span class="skill-tag">Vulnerability Surface Auditing</span>
+            <span class="skill-tag">Defense-in-Depth</span>
+            <span class="skill-tag">CIA Triad</span>
+          </div>
+        </div>
+
+        <div class="skills-category-group">
+          <div class="skills-category-title">Operating Environments & Forensics:</div>
+          <div class="skills-tags">
+            <span class="skill-tag accent">Linux (Ubuntu, Kali)</span>
+            <span class="skill-tag accent">Windows & Windows Server</span>
+            <span class="skill-tag">Bash Navigation</span>
+            <span class="skill-tag">Digital Forensics Concepts</span>
+            <span class="skill-tag">Chain of Custody Preservation</span>
+            <span class="skill-tag">Evidence Documentation</span>
+          </div>
+        </div>
+
+        <div class="skills-category-group">
+          <div class="skills-category-title">Soft & Investigative Competencies:</div>
+          <div class="skills-tags">
+            <span class="skill-tag">Analytical Thinking</span>
+            <span class="skill-tag">Problem Solving</span>
+            <span class="skill-tag">Clear Communication</span>
+            <span class="skill-tag">Investigation & Reporting</span>
+            <span class="skill-tag">Meticulous Attention to Detail</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Hands-on Security Projects -->
+    <section class="resume-section">
+      <h2 class="section-title">Key Security Projects</h2>
+      <div class="section-content">
+        
+        <!-- Project 1 -->
+        <div class="item-entry">
+          <div class="item-header">
+            <div class="item-title">Log Analysis using Splunk Enterprise</div>
+            <div class="item-meta">Lab & Simulation Environment</div>
+          </div>
+          <div class="item-subtitle">Security Information & Event Management (SIEM) Operations</div>
+          <ul class="item-bullets">
+            <li>Ingested, parsed, and monitored authentication, firewall, and endpoint syslog streams across multi-node virtual lab topologies.</li>
+            <li>Constructed custom Search Processing Language (SPL) queries to identify brute-force dictionary assaults, anomalous logon bursts, and potential unauthorized lateral movement.</li>
+            <li>Created real-time event dashboards to triage security alerts and recommend actionable firewall blocking rules.</li>
+          </ul>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="item-entry">
+          <div class="item-header">
+            <div class="item-title">Network Scanning & Service Enumeration using Nmap</div>
+            <div class="item-meta">Lab & Defensive Auditing Environment</div>
+          </div>
+          <div class="item-subtitle">Defensive Reconnaissance & Attack Surface Identification</div>
+          <ul class="item-bullets">
+            <li>Conducted targeted active network discovery, TCP SYN stealth scans (-sS), and aggressive service version probes (-sV).</li>
+            <li>Enumerated active listening banners across critical services including SSH (22), HTTP/HTTPS (80/443), MySQL (3306), and Apache Tomcat (8080).</li>
+            <li>Identified misconfigured network daemons, outdated software signatures, and compiled hardening remediation guidelines.</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Education & Training -->
+    <section class="resume-section">
+      <h2 class="section-title">Education & Credentials</h2>
+      <div class="section-content">
+        
+        <!-- Degree 1 -->
+        <div class="item-entry">
+          <div class="item-header">
+            <div class="item-title">Advanced Diploma in Cyber Defence & Certified Ethical Hacking</div>
+            <div class="item-meta">Pursuing</div>
+          </div>
+          <div class="item-subtitle">RedTeam Hacker Academy, Thrissur</div>
+          <ul class="item-bullets">
+            <li>Intensive practical training covering ethical hacking methodologies, penetration testing, defensive SOC architectures, incident triage, and hands-on laboratory exercises.</li>
+          </ul>
+        </div>
+
+        <!-- Degree 2 -->
+        <div class="item-entry">
+          <div class="item-header">
+            <div class="item-title">Bachelor of Arts in Criminology and Police Science</div>
+            <div class="item-meta">Graduated</div>
+          </div>
+          <div class="item-subtitle">St. Thomas' College (Autonomous), Thrissur</div>
+          <ul class="item-bullets">
+            <li>Curriculum focused on criminal psychology, crime investigation methodology, police administration, evidence gathering, penology, and digital crime prevention principles.</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+
+</body>
+</html>
