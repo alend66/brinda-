@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BRINDA T B // Cyber Security Specialist & Forensics Operative</title>
+  <meta name="description" content="Portfolio of Brinda T B - Cyber Security Enthusiast, SOC Analyst, Certified Ethical Hacker in training, with a Bachelor's in Criminology & Police Science.">
+  <meta name="keywords" content="Brinda T B, Cybersecurity, SOC Analyst, Ethical Hacking, Splunk SIEM, Digital Forensics, Criminology, RedTeam Hacker Academy">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Background Canvas for Floating Cyber Particles -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- Cyber Grid Background Overlay -->
+  <div class="cyber-grid-overlay"></div>
+
+  <!-- Scanlines Overlay (Toggleable CRT Anime Effect) -->
+  <div id="scanlineOverlay" class="scanlines"></div>
+
+  <!-- Vignette -->
+  <div class="cyber-vignette"></div>
+
+  <!-- ===================================================================
+       TOP SYSTEM STATUS TICKER
+       =================================================================== -->
+  <div class="system-ticker-bar">
+    <div class="ticker-left">
+      <div class="status-beacon">
+        <span class="pulse-dot"></span>
+        <span>SYSTEM STATUS: OPERATIONAL</span>
+      </div>
+      <span class="defcon-badge">DEFCON 4 // MONITORING</span>
+    </div>
+
+    <div class="ticker-center">
+      <span>GRID: <strong>KERALA // SECTOR-04</strong></span>
+      <span>|</span>
+      <span>THREAT LEVEL: <span class="highlight">LOW</span></span>
+      <span>|</span>
+      <span>PROTOCOL: <strong>CYBER_DEFENCE_ACTIVE</strong></span>
+    </div>
+
+    <div class="ticker-right">
+      <button id="scanlinesToggleBtn" class="hud-control-btn active" title="Toggle CRT Screen Scanlines">
+        <span>⚡</span>
+        <span class="scan-status-text">HUD: CRT</span>
+      </button>
+      <button id="audioToggleBtn" class="hud-control-btn active" title="Toggle Cyber Audio Feedback">
+        <span>🔊</span>
+        <span class="audio-status-text">SFX: ON</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- ===================================================================
+       HEADER NAVIGATION
+       =================================================================== -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="#hero" class="brand-logo">
+        <div class="cyber-shield-icon">
+          <span class="shield-glyph">B</span>
+        </div>
+        <div class="brand-info">
+          <span class="brand-name">BRINDA<span class="accent">.TB</span></span>
+          <span class="brand-role">CYBER DEFENSE // SOC</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="#about" class="nav-link"><span class="nav-num">01</span> ABOUT</a></li>
+          <li><a href="#skills" class="nav-link"><span class="nav-num">02</span> MATRIX</a></li>
+          <li><a href="#projects" class="nav-link"><span class="nav-num">03</span> MISSIONS</a></li>
+          <li><a href="#radar" class="nav-link"><span class="nav-num">04</span> SOC RADAR</a></li>
+          <li><a href="#terminal" class="nav-link"><span class="nav-num">05</span> TERMINAL</a></li>
+          <li><a href="#education" class="nav-link"><span class="nav-num">06</span> DOSSIER</a></li>
+          <li><a href="#contact" class="nav-link"><span class="nav-num">07</span> COMMS</a></li>
+        </ul>
+      </nav>
+
+      <!-- Actions -->
+      <div class="nav-actions">
+        <button id="openResumeBtn" class="cv-download-btn">
+          <span>📄</span>
+          <span>DOSSIER CV</span>
+        </button>
+
+        <button id="mobileToggle" class="mobile-toggle" aria-label="Toggle Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobileNavDrawer" class="mobile-nav-drawer">
+    <div class="mobile-nav-header">
+      <span class="brand-role">SECURE NAVIGATION //</span>
+    </div>
+    <ul class="mobile-nav-list">
+      <li><a href="#about" class="nav-link mobile-nav-link"><span class="nav-num">01</span> ABOUT DOSSIER</a></li>
+      <li><a href="#skills" class="nav-link mobile-nav-link"><span class="nav-num">02</span> SKILL MATRIX</a></li>
+      <li><a href="#projects" class="nav-link mobile-nav-link"><span class="nav-num">03</span> MISSIONS & PROJECTS</a></li>
+      <li><a href="#radar" class="nav-link mobile-nav-link"><span class="nav-num">04</span> SOC RADAR</a></li>
+      <li><a href="#terminal" class="nav-link mobile-nav-link"><span class="nav-num">05</span> BRINDA-OS TERMINAL</a></li>
+      <li><a href="#education" class="nav-link mobile-nav-link"><span class="nav-num">06</span> EDUCATION</a></li>
+      <li><a href="#contact" class="nav-link mobile-nav-link"><span class="nav-num">07</span> ENCRYPTED COMMS</a></li>
+    </ul>
+  </div>
+
+  <!-- ===================================================================
+       HERO SECTION: OPERATIVE DOSSIER
+       =================================================================== -->
+  <section id="hero" class="hero-section">
+    <div class="container hero-grid">
+      
+      <!-- Left Hero Column -->
+      <div class="hero-content">
+        <div class="operative-tag">
+          <span>// SECURITY CLEARANCE: LEVEL 3</span>
+          <span>•</span>
+          <span>OPERATIVE ID: BRINDA-2435</span>
+        </div>
+
+        <h1 class="hero-title">
+          <span class="glow-name">BRINDA T B</span>
+        </h1>
+
+        <div class="hero-subtitle-container">
+          <span>[ROLE] &gt;</span>
+          <span id="typewriter-text"></span>
+          <span class="typed-cursor"></span>
+        </div>
+
+        <p class="hero-summary">
+          Motivated <span class="highlight">Cyber Security Specialist</span> combining a foundational <span class="highlight-crim">Bachelor's Degree in Criminology & Police Science</span> with specialized training in <span class="highlight">Advanced Cyber Defence and Certified Ethical Hacking</span>. Focused on proactive security monitoring, Splunk log analysis, cybercrime behavioral profiling, and digital forensics operations.
+        </p>
+
+        <!-- Key Telemetry Cards -->
+        <div class="hero-intel-cards">
+          <div class="intel-card">
+            <div class="intel-label">CORE SPECIALTY</div>
+            <div class="intel-value">SOC & SIEM Operations</div>
+          </div>
+          <div class="intel-card crimson">
+            <div class="intel-label">CRIMINOLOGY NEXUS</div>
+            <div class="intel-value">Forensic Investigation</div>
+          </div>
+          <div class="intel-card purple">
+            <div class="intel-label">ACADEMY</div>
+            <div class="intel-value">RedTeam Hacker Academy</div>
+          </div>
+          <div class="intel-card green">
+            <div class="intel-label">DEPLOYMENT BASE</div>
+            <div class="intel-value">Thrissur, Kerala, IN</div>
+          </div>
+        </div>
+
+        <!-- Call to Action Buttons -->
+        <div class="hero-cta-group">
+          <a href="#projects" class="btn-cyber-primary">
+            <span>⚔️</span>
+            <span>INSPECT MISSIONS</span>
+          </a>
+          <button id="heroResumeBtn" class="btn-cyber-outline">
+            <span>📂</span>
+            <span>VIEW RESUME CV</span>
+          </button>
+          <a href="#terminal" class="btn-cyber-outline">
+            <span>💻</span>
+            <span>ACCESS TERMINAL</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Hero Column: Cyber Anime Operative Hologram Frame -->
+      <div class="hero-avatar-wrapper">
+        <div class="avatar-hud-frame">
+          <!-- Tactical Corner Brackets -->
+          <div class="corner-bracket top-left"></div>
+          <div class="corner-bracket top-right"></div>
+          <div class="corner-bracket bottom-left"></div>
+          <div class="corner-bracket bottom-right"></div>
+
+          <!-- Floating Holographic Badge Tags -->
+          <div class="hud-tag hud-tag-top">
+            <span>🛡️</span>
+            <span>SPLUNK SIEM ACTIVE</span>
+          </div>
+
+          <div class="hud-tag hud-tag-bottom">
+            <span>🔍</span>
+            <span>DIGITAL FORENSICS: 98%</span>
+          </div>
+
+          <div class="avatar-image-container">
+            <img src="assets/hero-avatar.jpg" alt="Anime Cyber Security Operative - Brinda T B" class="avatar-img">
+          </div>
+
+          <!-- Avatar Telemetry Sub-bar -->
+          <div class="avatar-telemetry-bar">
+            <span>ETHICAL HACKING METHODOLOGY</span>
+            <span class="val-green">ARMED & READY</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       OPERATIVE SYNERGY / ABOUT SECTION
+       =================================================================== -->
+  <section id="about" class="about-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-pre-title">STRATEGIC CAPABILITY PROFILE</div>
+        <h2 class="section-title">THE CRIMINOLOGY + CYBER SYNERGY</h2>
+        <p class="section-subtitle">
+          Where criminal psychology and investigative discipline unite with network packet analysis, ethical hacking countermeasures, and enterprise SIEM vigilance.
+        </p>
+      </div>
+
+      <div class="synergy-grid">
+        <!-- Card 1 -->
+        <div class="synergy-card">
+          <div class="synergy-icon">🛡️</div>
+          <h3>SOC Security Monitoring</h3>
+          <p>
+            Continuous detection and surveillance of security events using Splunk Enterprise. Expert at spotting anomalous logon behaviors, unauthorized privilege escalation, and lateral movement across internal network perimeters.
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="synergy-card magenta">
+          <div class="synergy-icon">🔍</div>
+          <h3>Criminological Profiling</h3>
+          <p>
+            Leveraging a Bachelor's in Criminology and Police Science to decode adversary motives, social engineering vectors, insider threat behavioral patterns, and criminal psychology behind digital attacks.
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="synergy-card">
+          <div class="synergy-icon">🔬</div>
+          <h3>Digital Forensics & Evidence</h3>
+          <p>
+            Strict adherence to chain of custody, evidence acquisition, timeline reconstruction, and RAM/disk analysis fundamentals. Producing verifiable forensic reports that withstand technical and legal scrutiny.
+          </p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="synergy-card magenta">
+          <div class="synergy-icon">⚡</div>
+          <h3>Defensive Reconnaissance</h3>
+          <p>
+            Proactive network auditing and service enumeration utilizing Nmap and protocol analyzers (TCP/IP, DNS, HTTP/S). Discovering open ports, unhardened services, and misconfigurations before malicious actors can exploit them.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       SKILL MATRIX SECTION
+       =================================================================== -->
+  <section id="skills" class="skills-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-pre-title">ARSENAL & COMPETENCIES</div>
+        <h2 class="section-title">OPERATIVE SKILL MATRIX</h2>
+        <p class="section-subtitle">
+          Verified technical skills and investigative competencies calibrated for modern Security Operations Center (SOC) environments.
+        </p>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="skills-tabs">
+        <button class="skill-tab-btn active" data-category="all">ALL CAPABILITIES</button>
+        <button class="skill-tab-btn" data-category="defence">CYBER DEFENCE</button>
+        <button class="skill-tab-btn" data-category="siem">SIEM & LOGS</button>
+        <button class="skill-tab-btn" data-category="network">NETWORKING</button>
+        <button class="skill-tab-btn" data-category="forensics">FORENSICS & ENV</button>
+      </div>
+
+      <!-- Skills Matrix Grid -->
+      <div class="skills-matrix-grid">
+        
+        <!-- Skill 1 -->
+        <div class="skill-hud-card" data-category="defence">
+          <div class="skill-card-top">
+            <span class="skill-category-pill">DEFENCE</span>
+            <span class="skill-level-badge">PROFICIENT</span>
+          </div>
+          <h3 class="skill-name">Cyber Security Fundamentals</h3>
+          <p class="skill-desc">
+            Core understanding of CIA triad (Confidentiality, Integrity, Availability), Defense-in-Depth architectures, vulnerability lifecycles, and attack surface minimization.
+          </p>
+          <div class="skill-bar-wrapper">
+            <div class="skill-bar-header">
+              <span>MASTERY RATING</span>
+              <span>88%</span>
+            </div>
+            <div class="skill-progress-track">
+              <div class="skill-progress-fill" style="width: 88%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skill 2 -->
+        <div class="skill-hud-card" data-category="siem">
+          <div class="skill-card-top">
+            <span class="skill-category-pill">SIEM</span>
+            <span class="skill-level-badge">ADVANCED PRACTICAL</span>
+          </div>
+          <h3 class="skill-name">Log Analysis & Security Monitoring</h3>
+          <p class="skill-desc">
+            Analyzing security event logs, correlating multi-source alerts, detecting brute-force patterns, and identifying malicious indicators of compromise (IOCs).
+          </p>
+          <div class="skill-bar-wrapper">
+            <div class="skill-bar-header">
+              <span>MASTERY RATING</span>
+              <span>90%</span>
+            </div>
+            <div class="skill-progress-track">
+              <div class="skill-progress-fill green" style="width: 90%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skill 3 -->
+        <div class="skill-hud-card" data-category="network">
+          <div class="skill-card-top">
+            <span class="skill-category-pill">NETWORKING</span>
+            <span class="skill-level-badge">STRONG CORE</span>
+          </div>
+          <h3 class="skill-name">Networking Protocols (TCP/IP, DNS, HTTP)</h3>
+          <p class="skill-desc">
+            Deep comprehension of packet communication, 3-way handshakes, DNS resolution queries, HTTP/HTTPS headers, subnetting, and port protocol mappings.
+          </p>
+          <div class="skill-bar-wrapper">
+            <div class="skill-bar-header">
+              <span>MASTERY RATING</span>
+              <span>85%</span>
+            </div>
+            <div class="skill-progress-track">
+              <div class="skill-progress-fill" style="width: 85%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skill 4 -->
+        <div class="skill-hud-card" data-category="siem">
+          <div class="skill-card-top">
+            <span class="skill-category-pill">SIEM PLATFORM</span>
+            <span class="skill-level-badge">PRACTICAL LAB</span>
+          </div>
+          <h3 class="skill-name">SIEM Basics (Splunk Enterprise)</h3>
+          <p class="skill-desc">
+            Utilizing Splunk Enterprise for indexing, writing Search Processing Language (SPL) queries, dashboard configuration, and automated event alerting.
+          </p>
+          <div class="skill-bar-wrapper">
+            <div class="skill-bar-header">
+              <span>MASTERY RATING</span>
+              <span>86%</span>
+            </div>
+            <div class="skill-progress-track">
+              <div class="skill-progress-fill green" style="width: 86%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skill 5 -->
+        <div class="skill-hud-card" data-category="forensics">
+          <div class="skill-card-top">
+            <span class="skill-category-pill">PLATFORMS</span>
+            <span class="skill-level-badge">OPERATIONAL</span>
+          </div>
+          <h3 class="skill-name">Windows & Linux Environment</h3>
+          <p class="skill-desc">
+            Hands-on administration across Windows Server, Linux (Ubuntu/Debian, Kali), Bash command line navigation, file system permissions, and event log auditing.
+          </p>
+          <div class="skill-bar-wrapper">
+            <div class="skill-bar-header">
+              <span>MASTERY RATING</span>
+              <span>84%</span>
+            </div>
+            <div class="skill-progress-track">
+              <div class="skill-progress-fill magenta" style="width: 84%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skill 6 -->
+        <div class="skill-hud-card" data-category="forensics">
+          <div class="skill-card-top">
+            <span class="skill-category-pill">INVESTIGATION</span>
+            <span class="skill-level-badge">ACADEMIC & APPLIED</span>
+          </div>
+          <h3 class="skill-name">Digital Forensics Concepts</h3>
+          <p class="skill-desc">
+            Chain of custody maintenance, forensic disk imaging principles, volatile memory artifact extraction concepts, and tamper-proof evidence preservation.
+          </p>
+          <div class="skill-bar-wrapper">
+            <div class="skill-bar-header">
+              <span>MASTERY RATING</span>
+              <span>85%</span>
+            </div>
+            <div class="skill-progress-track">
+              <div class="skill-progress-fill magenta" style="width: 85%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skill 7 -->
+        <div class="skill-hud-card" data-category="defence">
+          <div class="skill-card-top">
+            <span class="skill-category-pill">INCIDENT RESPONSE</span>
+            <span class="skill-level-badge">ENTRY LEVEL / BEGINNER</span>
+          </div>
+          <h3 class="skill-name">Incident Analysis & Triage</h3>
+          <p class="skill-desc">
+            Identifying initial incident triggers, assessing severity levels, classifying threats, executing containment playbooks, and drafting post-incident summaries.
+          </p>
+          <div class="skill-bar-wrapper">
+            <div class="skill-bar-header">
+              <span>MASTERY RATING</span>
+              <span>78%</span>
+            </div>
+            <div class="skill-progress-track">
+              <div class="skill-progress-fill" style="width: 78%;"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Soft & Investigative Skills Section -->
+      <div class="soft-skills-container">
+        <h3 class="soft-skills-title">
+          <span>🧠</span>
+          <span>INVESTIGATIVE & ANALYTICAL TRAITS</span>
+        </h3>
+        <div class="soft-skills-pills">
+          <div class="soft-pill">
+            <span>🔬</span>
+            <span>Analytical Thinking</span>
+          </div>
+          <div class="soft-pill">
+            <span>🧩</span>
+            <span>Problem Solving Under Pressure</span>
+          </div>
+          <div class="soft-pill">
+            <span>📢</span>
+            <span>Clear Stakeholder Communication</span>
+          </div>
+          <div class="soft-pill">
+            <span>📋</span>
+            <span>Investigation & Rigorous Reporting</span>
+          </div>
+          <div class="soft-pill">
+            <span>🎯</span>
+            <span>Meticulous Attention to Detail</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       MISSION PROJECTS SHOWCASE
+       =================================================================== -->
+  <section id="projects" class="projects-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-pre-title">DECLASSIFIED FIELD OPERATIONS</div>
+        <h2 class="section-title">CYBER DEFENSE MISSIONS</h2>
+        <p class="section-subtitle">
+          Real-world lab implementations demonstrating hands-on proficiency in security monitoring, threat detection, and network service enumeration.
+        </p>
+      </div>
+
+      <div class="projects-container">
+        
+        <!-- Mission 01: Splunk Enterprise Log Analysis -->
+        <div class="project-feature-card">
+          <div class="project-visual-side">
+            <img src="assets/soc-command.jpg" alt="Splunk Enterprise SOC Command Room" class="project-banner-img">
+            <div class="project-visual-overlay">
+              <span class="project-mission-id">MISSION_01 // SIEM DEPLOYMENT</span>
+              <div class="project-status-tag" style="font-family: var(--font-mono); font-size: 0.72rem; color: #00ffa3;">
+                ● STATUS: LOG TRIAGE COMPLETE
+              </div>
+            </div>
+          </div>
+
+          <div class="project-info">
+            <div>
+              <h3 class="project-title">Log Analysis Using Splunk Enterprise</h3>
+              <p class="project-summary">
+                Configured and deployed Splunk Enterprise within simulated enterprise network segments to aggregate, monitor, and analyze high-volume authentication and firewall syslog streams. Successfully detected and flagged multi-vector suspicious activities including brute-force dictionary assaults and unauthorized ingress attempts.
+              </p>
+
+              <ul class="project-highlights-list">
+                <li>
+                  <span class="bullet">▶</span>
+                  <span>Engineered custom Search Processing Language (SPL) queries to parse authentication failure bursts across edge gateways.</span>
+                </li>
+                <li>
+                  <span class="bullet">▶</span>
+                  <span>Built real-time visualization dashboards to correlate anomalous IP addresses with reputation lists and geo-location data.</span>
+                </li>
+                <li>
+                  <span class="bullet">▶</span>
+                  <span>Formulated incident containment recommendations and blacklisted compromised source subnets.</span>
+                </li>
+              </ul>
+
+              <div class="project-tech-stack">
+                <span class="tech-tag">Splunk Enterprise</span>
+                <span class="tech-tag">SPL Queries</span>
+                <span class="tech-tag">Syslog Analysis</span>
+                <span class="tech-tag">Threat Detection</span>
+                <span class="tech-tag">SOC Triage</span>
+              </div>
+            </div>
+
+            <!-- Embedded Interactive Splunk Console -->
+            <div class="project-simulator-box">
+              <div class="sim-header">
+                <span>INTERACTIVE SPLUNK QUERY DEMO</span>
+                <div class="sim-tabs">
+                  <button class="sim-btn sim-btn-splunk active" data-query="ssh_failed">SSH Brute-Force</button>
+                  <button class="sim-btn sim-btn-splunk" data-query="port_scan">Port Recon</button>
+                  <button class="sim-btn sim-btn-splunk" data-query="malicious_ip">C2 Outbound</button>
+                  <button class="sim-btn sim-btn-splunk" data-query="exfil_data">Data Exfil</button>
+                </div>
+              </div>
+              <div id="splunkConsoleOutput" class="sim-console-output">
+                [SPLUNK SEARCH: index=security sourcetype=syslog "Failed password"]<br>
+                &gt; Parsing 14,289 events across cluster...<br>
+                <span style="color:#ff2a5f;">[ALERT // HIGH] Multiple authentication failures detected!</span><br>
+                Timestamp: 2026-10-27 10:14:02 UTC<br>
+                Target: SSH Daemon (Port 22) - Host: SRV-APP-PROD-01<br>
+                Attacking IP: 185.220.101.5 [TOR Exit Node / Netherlands]<br>
+                Failures in 60s: 84 attempts (Brute-Force Dictionary Signature)<br>
+                Pattern: Repeated attempts for users root, admin, test, deploy<br>
+                ACTION TAKEN: Automated iptables null-route applied for IP 185.220.101.5
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mission 02: Nmap Network Scanning & Enumeration -->
+        <div class="project-feature-card reverse">
+          <div class="project-visual-side">
+            <img src="assets/forensics.jpg" alt="Digital Forensics and Network Reconnaissance Lab" class="project-banner-img">
+            <div class="project-visual-overlay">
+              <span class="project-mission-id">MISSION_02 // RECON & ENUMERATION</span>
+              <div class="project-status-tag" style="font-family: var(--font-mono); font-size: 0.72rem; color: #00f0ff;">
+                ● STATUS: NETWORK MAP GENERATED
+              </div>
+            </div>
+          </div>
+
+          <div class="project-info">
+            <div>
+              <h3 class="project-title">Network Scanning & Service Enumeration Using Nmap</h3>
+              <p class="project-summary">
+                Conducted systematic defensive reconnaissance and port discovery against simulated virtual lab topologies. Identified running service versions, detected exposed unhardened endpoints, and performed vulnerability surface evaluations with Nmap Scripting Engine (NSE).
+              </p>
+
+              <ul class="project-highlights-list">
+                <li>
+                  <span class="bullet">▶</span>
+                  <span>Executed TCP SYN stealth scans (-sS) and version probes (-sV) across multi-tier server clusters.</span>
+                </li>
+                <li>
+                  <span class="bullet">▶</span>
+                  <span>Enumerated service banners across SSH (22), HTTP/HTTPS (80/443), MySQL (3306), and Apache Tomcat (8080).</span>
+                </li>
+                <li>
+                  <span class="bullet">▶</span>
+                  <span>Identified outdated web server binaries and compiled remediation blueprints to harden listening sockets.</span>
+                </li>
+              </ul>
+
+              <div class="project-tech-stack">
+                <span class="tech-tag">Nmap 7.94</span>
+                <span class="tech-tag">NSE Scripting</span>
+                <span class="tech-tag">TCP/IP Protocol Suite</span>
+                <span class="tech-tag">Wireshark</span>
+                <span class="tech-tag">Lab Topologies</span>
+              </div>
+            </div>
+
+            <!-- Embedded Interactive Nmap Console -->
+            <div class="project-simulator-box">
+              <div class="sim-header">
+                <span>INTERACTIVE NMAP TERMINAL DEMO</span>
+                <div class="sim-tabs">
+                  <button class="sim-btn sim-btn-nmap active" data-scan="syn_scan">SYN Stealth</button>
+                  <button class="sim-btn sim-btn-nmap" data-scan="version_scan">Version Probe</button>
+                  <button class="sim-btn sim-btn-nmap" data-scan="vuln_scan">NSE Vuln Scan</button>
+                  <button class="sim-btn sim-btn-nmap" data-scan="os_scan">OS Fingerprint</button>
+                </div>
+              </div>
+              <div id="nmapConsoleOutput" class="sim-console-output">
+                $ nmap -sS -T4 192.168.1.105<br>
+                Starting Nmap 7.94 ( https://nmap.org ) at 2026-10-27 10:14 IST<br>
+                Nmap scan report for target-host.lan (192.168.1.105)<br>
+                Host is up (0.00042s latency).<br>
+                Not shown: 994 closed tcp ports (reset)<br>
+                PORT     STATE SERVICE<br>
+                22/tcp   open  ssh<br>
+                80/tcp   open  http<br>
+                443/tcp  open  https<br>
+                3306/tcp open  mysql<br>
+                8080/tcp open  http-proxy<br>
+                Nmap done: 1 IP address (1 host up) scanned in 1.48 seconds
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       LIVE SOC RADAR & THREAT SIMULATOR
+       =================================================================== -->
+  <section id="radar" class="radar-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-pre-title">REAL-TIME THREAT TELEMETRY</div>
+        <h2 class="section-title">SOC INCIDENT RADAR</h2>
+        <p class="section-subtitle">
+          Interactive security operations console simulating live perimeter sweeps, active threat detections, and operative containment workflows.
+        </p>
+      </div>
+
+      <div class="radar-soc-wrapper">
+        
+        <!-- Radar Display -->
+        <div class="radar-display-column">
+          <div class="radar-canvas-container">
+            <canvas id="radarCanvas"></canvas>
+          </div>
+          <div class="radar-telemetry-stats">
+            <div class="radar-stat-item">
+              <div class="stat-num">360°</div>
+              <div class="stat-label">SWEEP ANGLE</div>
+            </div>
+            <div class="radar-stat-item threat">
+              <div class="stat-num">4</div>
+              <div class="stat-label">ACTIVE BLIPS</div>
+            </div>
+            <div class="radar-stat-item">
+              <div class="stat-num">0.02ms</div>
+              <div class="stat-label">LATENCY</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Live Alert Feed & Triage Column -->
+        <div class="soc-live-feed-column">
+          <div class="feed-header">
+            <div class="feed-title">
+              <span>🚨</span>
+              <span>LIVE INCIDENT STREAM</span>
+            </div>
+            <span style="font-family: var(--font-mono); font-size: 0.72rem; color: #00ffa3;">FEED LIVE ●</span>
+          </div>
+
+          <div class="live-alert-list">
+            
+            <div class="alert-row critical">
+              <div class="alert-info">
+                <h4>[CRITICAL] RANSOMWARE EXTENSION INGRESS</h4>
+                <p>Host: WIN-SRV-FINANCE // Suspicious .locked payload detected via SMB</p>
+              </div>
+              <button class="triage-action-btn" data-action="Host Network Isolation">CONTAIN HOST</button>
+            </div>
+
+            <div class="alert-row warning">
+              <div class="alert-info">
+                <h4>[HIGH] SSH BRUTE-FORCE BURST</h4>
+                <p>IP: 185.220.101.5 // 84 failed root logins in 60s</p>
+              </div>
+              <button class="triage-action-btn" data-action="Firewall Blacklist">BLOCK IP</button>
+            </div>
+
+            <div class="alert-row">
+              <div class="alert-info">
+                <h4>[INFO] SYN HORIZONTAL RECONNAISSANCE</h4>
+                <p>Source: External // Subnet 10.0.4.0/24 sweep logged in Splunk</p>
+              </div>
+              <button class="triage-action-btn" data-action="Rate Limiting Applied">RATE LIMIT</button>
+            </div>
+
+            <div class="alert-row critical">
+              <div class="alert-info">
+                <h4>[CRITICAL] SUSPICIOUS C2 DNS BEACON</h4>
+                <p>Endpoint: 10.0.2.14 -> c2-command-relay.darknet.top:8443</p>
+              </div>
+              <button class="triage-action-btn" data-action="DNS Sinkhole & Forensics Dump">SINKHOLE</button>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       INTERACTIVE CYBER TERMINAL (BRINDA-OS)
+       =================================================================== -->
+  <section id="terminal" class="terminal-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-pre-title">DIRECT OPERATING SYSTEM INTERACTION</div>
+        <h2 class="section-title">BRINDA-OS TERMINAL CONSOLE</h2>
+        <p class="section-subtitle">
+          Type commands or use quick-action triggers to query operative dossiers, skill sets, missions, and forensics methodology.
+        </p>
+      </div>
+
+      <div class="terminal-wrapper">
+        <div class="terminal-top-bar">
+          <div class="terminal-dots">
+            <span class="terminal-dot red"></span>
+            <span class="terminal-dot yellow"></span>
+            <span class="terminal-dot green"></span>
+          </div>
+          <div class="terminal-header-title">
+            BRINDA-OS v2.6.0 (x86_64-pc-cyberdefense-kernel)
+          </div>
+          <div style="font-family: var(--font-mono); font-size: 0.7rem; color: #64748b;">
+            SESSION: ACTIVE
+          </div>
+        </div>
+
+        <div id="terminalBody" class="terminal-body">
+          <div class="term-output-line">
+            <span class="term-cyan">===================================================================</span><br>
+            <span class="term-green">WELCOME TO BRINDA-OS // CYBER DEFENSE TERMINAL v2.6.0</span><br>
+            <span class="term-dim">Authorized User: Guest Operative | Clearance: Level 3 Granted</span><br>
+            <span class="term-dim">System initialized: All security modules active and logging.</span><br>
+            <span class="term-cyan">Type '<span class="term-green">help</span>' for available commands or click quick triggers below.</span><br>
+            <span class="term-cyan">===================================================================</span>
+          </div>
+        </div>
+
+        <div class="terminal-input-row" style="padding: 0.5rem 1rem; background: #060913;">
+          <span class="term-prompt">operative@brinda-os:~$</span>
+          <input type="text" id="termInput" placeholder="Enter command (e.g., help, whoami, skills, projects, scan)..." autocomplete="off" spellcheck="false">
+        </div>
+
+        <div class="terminal-quick-buttons">
+          <span style="font-family: var(--font-mono); font-size: 0.7rem; color: #64748b; margin-right: 0.4rem;">QUICK:</span>
+          <button class="quick-cmd-btn" data-cmd="whoami">whoami</button>
+          <button class="quick-cmd-btn" data-cmd="skills">skills</button>
+          <button class="quick-cmd-btn" data-cmd="projects">projects</button>
+          <button class="quick-cmd-btn" data-cmd="forensics">forensics</button>
+          <button class="quick-cmd-btn" data-cmd="scan">scan</button>
+          <button class="quick-cmd-btn" data-cmd="education">education</button>
+          <button class="quick-cmd-btn" data-cmd="contact">contact</button>
+          <button class="quick-cmd-btn" data-cmd="clear">clear</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       EDUCATION & CREDENTIALS DOSSIER
+       =================================================================== -->
+  <section id="education" class="education-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-pre-title">ACADEMIC & PROFESSIONAL CREDENTIALS</div>
+        <h2 class="section-title">EDUCATION & TRAINING DOSSIER</h2>
+        <p class="section-subtitle">
+          Rigorous academic foundation in criminal science combined with hands-on certified training in ethical hacking and defense.
+        </p>
+      </div>
+
+      <div class="timeline-container">
+        
+        <!-- Timeline Item 1 -->
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-card">
+            <span class="timeline-badge">IN PROGRESS // ADVANCED TRAINING</span>
+            <h3 class="timeline-degree">Advanced Diploma in Cyber Defence & Certified Ethical Hacking</h3>
+            <div class="timeline-institution">RedTeam Hacker Academy, Thrissur (Pursuing)</div>
+            <p class="timeline-desc">
+              Comprehensive practical curriculum focused on offensive security concepts, ethical hacking methodologies, penetration testing fundamentals, network defence strategies, and incident triage in simulated target environments.
+            </p>
+          </div>
+        </div>
+
+        <!-- Timeline Item 2 -->
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-card">
+            <span class="timeline-badge">GRADUATED // BACHELOR OF ARTS</span>
+            <h3 class="timeline-degree">Bachelor of Arts in Criminology and Police Science</h3>
+            <div class="timeline-institution">St. Thomas' College (Autonomous), Thrissur</div>
+            <p class="timeline-desc">
+              In-depth study of criminal psychology, penology, Indian criminal law, police administration, investigative forensic methodologies, evidence preservation, and crime pattern analysis — providing a distinctive edge in cyber behavioral profiling.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       CONTACT / COMMS SECTION
+       =================================================================== -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-pre-title">INITIATE TRANSMISSION</div>
+        <h2 class="section-title">OPERATIVE COMMS CHANNELS</h2>
+        <p class="section-subtitle">
+          Ready to deploy analytical, investigative, and technical skills in your cybersecurity operations. Reach out directly through encrypted channels.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        
+        <!-- Direct Contact Channels -->
+        <div class="contact-channels">
+          
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=brindababu2435@gmail.com" target="_blank" rel="noopener noreferrer" class="channel-card">
+            <div class="channel-icon">✉️</div>
+            <div class="channel-meta">
+              <h4>DIRECT GMAIL COMMS (CLICK TO COMPOSE)</h4>
+              <p>brindababu2435@gmail.com</p>
+            </div>
+          </a>
+
+          <a href="tel:+919847602435" class="channel-card purple">
+            <div class="channel-icon">📞</div>
+            <div class="channel-meta">
+              <h4>VOICE / WHATSAPP TRANSMISSION</h4>
+              <p>+91 9847602435</p>
+            </div>
+          </a>
+
+          <a href="https://linkedin.com/in/brinda-t-b" target="_blank" rel="noopener noreferrer" class="channel-card magenta">
+            <div class="channel-icon">🔗</div>
+            <div class="channel-meta">
+              <h4>PROFESSIONAL NETWORK</h4>
+              <p>linkedin.com/in/brinda-t-b</p>
+            </div>
+          </a>
+
+          <div class="channel-card">
+            <div class="channel-icon">📍</div>
+            <div class="channel-meta">
+              <h4>OPERATIONAL HEADQUARTERS</h4>
+              <p>Thrissur, Kerala, India</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Interactive Transmission Form Connected to Gmail -->
+        <div class="comms-form-panel">
+          <div class="corner-bracket top-left"></div>
+          <div class="corner-bracket top-right"></div>
+          <div class="corner-bracket bottom-left"></div>
+          <div class="corner-bracket bottom-right"></div>
+
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.25rem; flex-wrap: wrap; gap: 0.5rem;">
+            <div>
+              <h3 style="font-family: var(--font-display); font-size: 1.3rem; color: #fff; margin-bottom: 0.25rem;">
+                DISPATCH TRANSMISSION
+              </h3>
+              <p style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--neon-cyan);">
+                CONNECTED TO: <strong style="color: #00ffa3;">brindababu2435@gmail.com</strong>
+              </p>
+            </div>
+            <span class="defcon-badge" style="border-color: #00ffa3; color: #00ffa3;">GMAIL LINK: ACTIVE</span>
+          </div>
+
+          <form id="commsForm">
+            <div class="form-group">
+              <label for="commsName" class="form-label">SENDER DESIGNATION / NAME</label>
+              <input type="text" id="commsName" class="form-control" placeholder="e.g., Lead SOC Architect / Hiring Lead" required>
+            </div>
+
+            <div class="form-group">
+              <label for="commsEmail" class="form-label">RETURN COMMS FREQUENCY / SENDER EMAIL</label>
+              <input type="email" id="commsEmail" class="form-control" placeholder="e.g., your-email@organization.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="commsSubject" class="form-label">MISSION OBJECTIVE / SUBJECT</label>
+              <input type="text" id="commsSubject" class="form-control" placeholder="e.g., SOC Analyst Opportunity // Incident Response Inquiry" required>
+            </div>
+
+            <div class="form-group">
+              <label for="commsMessage" class="form-label">ENCRYPTED MESSAGE CONTENT</label>
+              <textarea id="commsMessage" class="form-control" placeholder="Provide details regarding the project, SOC opportunity, or collaboration inquiry..." required></textarea>
+            </div>
+
+            <div style="display: flex; gap: 0.85rem; flex-wrap: wrap;">
+              <button type="submit" id="dispatchSubmitBtn" class="btn-cyber-primary form-submit-btn" style="flex: 1; min-width: 220px;">
+                <span>🔒</span>
+                <span>DISPATCH TO BRINDA GMAIL</span>
+              </button>
+              <button type="button" id="openGmailDirectBtn" class="btn-cyber-outline" style="flex: 1; min-width: 200px; justify-content: center;">
+                <span>✉️</span>
+                <span>OPEN GMAIL WEB DIRECT</span>
+              </button>
+            </div>
+          </form>
+
+          <!-- Success & Direct Dispatch Feedback Box -->
+          <div id="dispatchSuccessNotice" style="display: none; margin-top: 1.25rem; padding: 1rem; background: rgba(0, 255, 163, 0.08); border: 1px solid #00ffa3; border-radius: 4px; font-family: var(--font-mono); font-size: 0.8rem;">
+            <div style="color: #00ffa3; font-weight: bold; margin-bottom: 0.4rem;">✓ TRANSMISSION ROUTED TO BRINDA GMAIL</div>
+            <div style="color: #cbd5e1; font-size: 0.75rem; margin-bottom: 0.75rem;">
+              Recipient: <strong style="color: #00f0ff;">brindababu2435@gmail.com</strong><br>
+              Encrypted transmission prepared and dispatched. Click below to view or send via your Gmail account:
+            </div>
+            <a id="launchGmailLink" href="https://mail.google.com/mail/?view=cm&fs=1&to=brindababu2435@gmail.com" target="_blank" rel="noopener noreferrer" class="btn-cyber-outline" style="padding: 0.45rem 0.9rem; font-size: 0.75rem;">
+              <span>🚀</span> <span>LAUNCH PRE-FILLED GMAIL COMPOSER</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       FOOTER
+       =================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-brand-title">BRINDA T B // CYBER DEFENSE</div>
+          <div class="footer-brand-subtitle">Criminology & Police Science • Ethical Hacking & SIEM Operations</div>
+        </div>
+
+        <ul class="footer-links">
+          <li><a href="#hero">OVERVIEW</a></li>
+          <li><a href="#skills">MATRIX</a></li>
+          <li><a href="#projects">MISSIONS</a></li>
+          <li><a href="#education">DOSSIER</a></li>
+          <li><a href="#contact">COMMS</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-bottom">
+        <div>ALL CONTENT IN ENGLISH • AUTHENTIC RESUME DOSSIER // SECURE TERMINAL ACTIVE</div>
+        <div style="margin-top: 4px; color: #475569;">© 2026 Brinda T B. All Systems Secured.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================================================================
+       RESUME MODAL // CLEAN PRINTABLE CV VIEW
+       =================================================================== -->
+  <div id="resumeModal" class="modal-overlay">
+    <div class="resume-modal-dialog">
+      <div class="modal-header">
+        <div class="modal-title">OPERATIVE RESUME DOSSIER // BRINDA T B</div>
+        <div class="modal-actions">
+          <button id="printResumeBtn" class="modal-print-btn" title="Print or Save as PDF">
+            <span>🖨️</span> PRINT / SAVE AS PDF
+          </button>
+          <button id="closeResumeBtn" class="modal-close-btn" title="Close Modal">
+            ✕ CLOSE
+          </button>
+        </div>
+      </div>
+
+      <div class="modal-body">
+        <div class="resume-document">
+          <div class="cv-doc-header">
+            <h1 class="cv-doc-name">BRINDA T B</h1>
+            <div class="cv-doc-contact">
+              Thrissur, Kerala | Phone: 9847602435 | Email: brindababu2435@gmail.com | LinkedIn: linkedin.com/in/brinda-t-b
+            </div>
+          </div>
+
+          <div class="cv-doc-section">
+            <h3>Professional Summary</h3>
+            <p>
+              Motivated Cyber Security enthusiast with a Bachelor's degree in Criminology and Police Science and currently pursuing an Advanced Diploma in Cyber Defence and Certified Ethical Hacking. Interested in security monitoring, threat analysis, cybercrime investigation, and digital forensics. Seeking opportunities to apply analytical and technical skills in cybersecurity operations.
+            </p>
+          </div>
+
+          <div class="cv-doc-section">
+            <h3>Technical Skills</h3>
+            <ul>
+              <li><strong>Cyber Security Fundamentals:</strong> CIA Triad, Defense in Depth, vulnerability lifecycles</li>
+              <li><strong>Log Analysis & Security Monitoring:</strong> Aggregation, triage, and threat identification</li>
+              <li><strong>Networking Basics:</strong> TCP/IP, DNS, HTTP, Port protocols, traffic analysis</li>
+              <li><strong>SIEM Basics:</strong> Splunk Enterprise, SPL query generation, dashboard alerting</li>
+              <li><strong>Operating Environments:</strong> Windows & Linux Environment administration</li>
+              <li><strong>Digital Forensics Concepts:</strong> Chain of custody, memory/disk analysis fundamentals</li>
+              <li><strong>Incident Analysis:</strong> Beginner alert triage, threat classification, and response</li>
+            </ul>
+          </div>
+
+          <div class="cv-doc-section">
+            <h3>Soft Skills</h3>
+            <ul>
+              <li>Analytical Thinking</li>
+              <li>Problem Solving</li>
+              <li>Communication Skills</li>
+              <li>Investigation & Reporting</li>
+              <li>Attention to Detail</li>
+            </ul>
+          </div>
+
+          <div class="cv-doc-section">
+            <h3>Projects</h3>
+            <div style="margin-bottom: 0.8rem;">
+              <strong>1. Log Analysis using Splunk Enterprise</strong>
+              <p>Monitored and analyzed logs to identify suspicious activities, brute-force anomalies, and unauthorized access attempts in simulated enterprise networks.</p>
+            </div>
+            <div>
+              <strong>2. Network Scanning & Service Enumeration using Nmap</strong>
+              <p>Performed reconnaissance and service identification in lab environments, mapping open ports and auditing service banners for potential vulnerabilities.</p>
+            </div>
+          </div>
+
+          <div class="cv-doc-section">
+            <h3>Education</h3>
+            <div style="margin-bottom: 0.8rem;">
+              <strong>Advanced Diploma in Cyber Defence & Certified Ethical Hacking</strong><br>
+              <span>RedTeam Hacker Academy, Thrissur (Pursuing)</span>
+            </div>
+            <div>
+              <strong>Bachelor of Arts in Criminology and Police Science</strong><br>
+              <span>St. Thomas' College (Autonomous), Thrissur</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cyber Toast Notification -->
+  <div id="cyberToast" class="cyber-toast">
+    <span>🛡️</span>
+    <span class="toast-msg">Cyber Telemetry Online</span>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
