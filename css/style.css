@@ -790,8 +790,14 @@ body {
   transition: transform var(--transition-slow);
 }
 
-.avatar-hud-frame:hover .avatar-img {
-  transform: scale(1.04);
+.avatar-img.real-photo {
+  object-position: center 25%;
+  transform: scale(1.12);
+  filter: contrast(1.05) brightness(1.02);
+}
+
+.avatar-hud-frame:hover .avatar-img.real-photo {
+  transform: scale(1.18);
 }
 
 /* Floating HUD Tag Overlays on Avatar */
