@@ -2,7 +2,7 @@
 
 An anime cyberpunk themed cybersecurity portfolio for **Brinda T B**, showcasing expertise in SOC security monitoring, Splunk log analysis, network scanning with Nmap, digital forensics, and criminological behavioral profiling.
 
-![Brinda Cyber Portfolio](assets/hero-avatar.jpg)
+![Brinda Cyber Portfolio](assets/brinda-real.png)
 
 ---
 
